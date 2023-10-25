@@ -16,8 +16,8 @@ step "run-a-script" {
     }
 }
 
-step "run-a-script-2" {
-    name = "Run a Script-2"
+step "run-a-script-2-slug" {
+    name = "Run a Script-2-name"
     properties = {
         Octopus.Action.TargetRoles = "Linux"
     }
@@ -33,6 +33,25 @@ step "run-a-script-2" {
         worker_pool_variable = ""
     }
 }
+
+step "run-a-script-2" {
+    name = "Run a Script"
+    properties = {
+        Octopus.Action.TargetRoles = "Linux"
+    }
+
+    action {
+        action_type = "Octopus.Script"
+        properties = {
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Script.ScriptBody = "echo Hello World"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "Bash"
+        }
+        worker_pool_variable = ""
+    }
+}
+
 
 step "run-a-script-2" {
     name = "Run a Script"
