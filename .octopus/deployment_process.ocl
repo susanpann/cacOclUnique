@@ -54,7 +54,7 @@ step "run-a-script-2" {
 
 
 step "run-a-script-2" {
-    name = "Run a Script"
+    name = "Run a Script5"
     properties = {
         Octopus.Action.TargetRoles = "Linux"
     }
