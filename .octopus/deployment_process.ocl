@@ -33,3 +33,21 @@ step "run-a-script-2-slug" {
         worker_pool_variable = ""
     }
 }
+
+step "asdasd" {
+    name = "asdasd"
+    properties = {
+        Octopus.Action.TargetRoles = "coffee"
+    }
+
+    action {
+        action_type = "Octopus.Script"
+        properties = {
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Script.ScriptBody = "echo 'hi';"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "Bash"
+        }
+        worker_pool_variable = ""
+    }
+}
