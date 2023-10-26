@@ -14,6 +14,7 @@ step "run-a-script" {
         }
         worker_pool_variable = ""
     }
+}
 
 step "run-a-script-2-slug" {
     name = "Run a Script-2-name"
